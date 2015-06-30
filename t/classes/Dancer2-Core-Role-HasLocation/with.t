@@ -1,11 +1,13 @@
 use v6;
 use Inline::Perl5;
+use Test::More:from<Perl5>;
+
 EVAL q:to/EOF/, :lang<perl5>;
+plan tests => 11;
 use strict;
 use warnings;
 use File::Spec;
 use File::Basename;
-use Test::More tests => 11;
 
 {
     package App;

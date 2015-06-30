@@ -1,8 +1,8 @@
 use v6;
 use Inline::Perl5;
-EVAL q:to/EOF/, :lang<perl5>;
-#!/usr/bin/env perl
+use Test::More:from<Perl5>;
 
+EVAL q:to/EOF/, :lang<perl5>;
 ## This test will first cause a (legitimate) error in a
 ## before_template_render hook
 ## Then it will fetch an unrelated route that should return normally.

@@ -1,13 +1,13 @@
 use v6;
 use Inline::Perl5;
+use Test::More:from<Perl5>;
+
 EVAL q:to/EOF/, :lang<perl5>;
+plan tests => 3;
 use strict;
 use warnings;
-use Test::More;
 use Test::Fatal;
 use Dancer2::Core::Route;
-
-plan tests => 3;
 
 my @no_leading_slash = ( 'no+leading+slash', '' );
 my @leading_slash = ('/+leading+slash', '/', '//' );

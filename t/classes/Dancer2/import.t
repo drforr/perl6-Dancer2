@@ -1,15 +1,17 @@
 use v6;
 use Inline::Perl5;
+use Test::More:from<Perl5>;
+
 EVAL q:to/EOF/, :lang<perl5>;
 use strict;
 use warnings;
-use Test::More tests => 34;
 use Test::Fatal;
 use Scalar::Util 'refaddr';
 use Plack::Test;
 use HTTP::Request::Common;
 
 BEGIN {
+    plan tests => 34;
     require Dancer2;
     can_ok( Dancer2::, 'runner' );
     is( Dancer2::->runner, undef, 'No runner by default' );

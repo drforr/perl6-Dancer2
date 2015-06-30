@@ -1,11 +1,13 @@
 use v6;
 use Inline::Perl5;
+use Test::More:from<Perl5>;
+
 EVAL q:to/EOF/, :lang<perl5>;
+plan tests => 2;
 use strict;
 use warnings;
 use Plack::Test;
 use HTTP::Request::Common;
-use Test::More tests => 2;
 
 {
     package App1;

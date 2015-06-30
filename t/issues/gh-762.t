@@ -1,7 +1,8 @@
 use v6;
 use Inline::Perl5;
+use Test::More:from<Perl5>;
+
 EVAL q:to/EOF/, :lang<perl5>;
-use Test::More;
 use Plack::Test;
 use HTTP::Request::Common;
 

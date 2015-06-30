@@ -1,16 +1,20 @@
 use v6;
 use Inline::Perl5;
+use Test::More:from<Perl5>;
+
 EVAL q:to/EOF/, :lang<perl5>;
 use strict;
 use warnings;
-use Test::More tests => 9;
 use Test::Fatal;
 use Plack::Test;
 use HTTP::Request::Common;
 use Plack::Builder;
 use URI::Escape;
 
-BEGIN { use_ok('Dancer2::Core::Request') }
+BEGIN {
+    plan tests => 9;
+    use_ok('Dancer2::Core::Request')
+}
 
 sub psgi_ok { [ 200, [], ['OK'] ] }
 

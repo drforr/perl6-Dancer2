@@ -1,11 +1,14 @@
 use v6;
 use Inline::Perl5;
+use Test::More:from<Perl5>;
+
 EVAL q:to/EOF/, :lang<perl5>;
 # define a sample DSL extension that will be used in the rest of these test
 # This extends Dancer2::Core::DSL but provides an extra keyword
 #
 # Each test below creates a new package so it can load Dancer2
 BEGIN {
+    plan tests => 5;
 
     package Dancer2::Test::ExtendedDSL;
 
@@ -21,10 +24,6 @@ BEGIN {
         return $_[1];
     }
 }
-
-package main;
-
-use Test::More tests => 5;
 
 package test1;
 use Test::More;

@@ -1,10 +1,12 @@
 use v6;
 use Inline::Perl5;
+use Test::More:from<Perl5>;
+
 EVAL q:to/EOF/, :lang<perl5>;
+plan tests => 4;
 use strict;
 use warnings;
 use Dancer2::Core;
-use Test::More tests => 4;
 
 my %tests = (
     'test'       => 'Test',

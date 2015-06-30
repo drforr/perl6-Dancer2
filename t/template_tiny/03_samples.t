@@ -1,8 +1,8 @@
 use v6;
 use Inline::Perl5;
-EVAL q:to/EOF/, :lang<perl5>;
-#!/usr/bin/env perl
+use Test::More:from<Perl5>;
 
+EVAL q:to/EOF/, :lang<perl5>;
 use strict;
 
 BEGIN {
@@ -10,7 +10,6 @@ BEGIN {
     $^W = 1;
 }
 use vars qw{$VAR1 $VAR2};
-use Test::More;
 use File::Spec::Functions ':ALL';
 use Dancer2::Template::Implementation::ForkedTiny ();
 use FindBin qw($Bin);

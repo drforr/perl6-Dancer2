@@ -1,10 +1,12 @@
 use v6;
 use Inline::Perl5;
+use Test::More:from<Perl5>;
+
 EVAL q:to/EOF/, :lang<perl5>;
+plan tests => 6;
 # reported memory leak without GH issue or RT ticket
 use strict;
 use warnings;
-use Test::More tests => 6;
 use Plack::Test;
 use Capture::Tiny 'capture_stderr';
 use HTTP::Request::Common;

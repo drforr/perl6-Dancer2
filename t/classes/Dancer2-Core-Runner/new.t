@@ -1,9 +1,11 @@
 use v6;
 use Inline::Perl5;
+use Test::More:from<Perl5>;
+
 EVAL q:to/EOF/, :lang<perl5>;
+plan tests => 39;
 use strict;
 use warnings;
-use Test::More tests => 39;
 
 use_ok('Dancer2::Core::Runner');
 
