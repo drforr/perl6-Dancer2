@@ -1,14 +1,11 @@
 use v6;
 use Inline::Perl5;
 use Test::More:from<Perl5>;
+use HTTP::Headers:from<Perl5>;
+use HTTP::Headers::Fast:from<Perl5>;
 
 EVAL q:to/EOF/, :lang<perl5>;
 plan tests => 6;
-use strict;
-use warnings;
-
-use HTTP::Headers;
-use HTTP::Headers::Fast;
 
 {
     package Object;

@@ -1,17 +1,15 @@
 use v6;
 use Inline::Perl5;
 use Test::More:from<Perl5>;
+use Test::Fatal:from<Perl5>;
+use File::Spec:from<Perl5>;
+use File::Temp:from<Perl5>;
 
 EVAL q:to/EOF/, :lang<perl5>;
-use strict;
-use warnings;
-use Test::Fatal;
 use Carp 'croak';
 
 use Dancer2::Core::Runner;
 use Dancer2::FileUtils qw/dirname path/;
-use File::Spec;
-use File::Temp;
 
 my $runner = Dancer2::Core::Runner->new();
 # XXX JMG added t/

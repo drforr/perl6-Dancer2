@@ -3,7 +3,6 @@ use Inline::Perl5;
 
 # XXX Uses Test::More dynamically here
 EVAL q:to/EOF/, :lang<perl5>;
-#!perl
 
 BEGIN {
   unless ($ENV{RELEASE_TESTING}) {

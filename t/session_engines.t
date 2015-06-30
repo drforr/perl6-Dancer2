@@ -1,14 +1,12 @@
 use v6;
 use Inline::Perl5;
 use Test::More:from<Perl5>;
+use Plack::Test:from<Perl5>;
+use HTTP::Cookies:from<Perl5>;
+use HTTP::Request::Common:from<Perl5>;
+use YAML:from<Perl5>;;
 
 EVAL q:to/EOF/, :lang<perl5>;
-use strict;
-use warnings;
-use YAML;
-use Plack::Test;
-use HTTP::Cookies;
-use HTTP::Request::Common;
 
 my @clients = qw(one two three);
 my $SESSION_DIR;

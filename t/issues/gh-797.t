@@ -1,13 +1,11 @@
 use v6;
 use Inline::Perl5;
 use Test::More:from<Perl5>;
+use Plack::Test:from<Perl5>;
+use HTTP::Request::Common:from<Perl5>;
+use JSON:from<Perl5>;
 
 EVAL q:to/EOF/, :lang<perl5>;
-use strict;
-use warnings;
-use Plack::Test;
-use HTTP::Request::Common;
-use JSON;
 
 {
     package App;

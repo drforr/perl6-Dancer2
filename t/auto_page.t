@@ -8,9 +8,6 @@ SKIP: {
     skip "### XXX ### Fix this later", 1 if $] < 6;
 
 }
-###use strict;
-###use warnings;
-###
 ###use Test::More;
 ###use Plack::Test;
 ###use HTTP::Request::Common;

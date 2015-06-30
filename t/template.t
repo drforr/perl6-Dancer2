@@ -1,15 +1,14 @@
 use v6;
 use Inline::Perl5;
 use Test::More:from<Perl5>;
+use Plack::Test:from<Perl5>;
+use HTTP::Request::Common:from<Perl5>;
+use File::Spec:from<Perl5>;
 
 EVAL q:to/EOF/, :lang<perl5>;
-use strict;
-use warnings;
-use Dancer2::Core::Hook;
-use Plack::Test;
-use HTTP::Request::Common;
 
-use File::Spec;
+use Dancer2::Core::Hook;
+
 use File::Basename 'dirname';
 
 eval { require Template; Template->import(); 1 }

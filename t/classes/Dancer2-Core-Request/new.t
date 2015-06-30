@@ -1,15 +1,13 @@
 use v6;
 use Inline::Perl5;
 use Test::More:from<Perl5>;
+use Plack::Test:from<Perl5>;
+use HTTP::Request::Common:from<Perl5>;
+use Test::Fatal:from<Perl5>;
+use Plack::Builder:from<Perl5>;
+use URI::Escape:from<Perl5>;
 
 EVAL q:to/EOF/, :lang<perl5>;
-use strict;
-use warnings;
-use Test::Fatal;
-use Plack::Test;
-use HTTP::Request::Common;
-use Plack::Builder;
-use URI::Escape;
 
 BEGIN {
     plan tests => 9;

@@ -4,8 +4,6 @@ use Test::More:from<Perl5>;
 
 EVAL q:to/EOF/, :lang<perl5>;
 plan tests => 5;
-use strict;
-use warnings;
 
 use_ok('Dancer2::Core::Factory');
 

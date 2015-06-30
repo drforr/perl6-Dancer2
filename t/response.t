@@ -3,8 +3,6 @@ use Inline::Perl5;
 use Test::More:from<Perl5>;
 
 EVAL q:to/EOF/, :lang<perl5>;
-use strict;
-use warnings;
 use Dancer2;
 use Dancer2::Core::Response;
 

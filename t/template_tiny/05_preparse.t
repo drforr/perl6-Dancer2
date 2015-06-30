@@ -1,15 +1,14 @@
 use v6;
 use Inline::Perl5;
-EVAL q:to/EOF/, :lang<perl5>;
-#!/usr/bin/env perl
+use Test::More:from<Perl5>;
 
-use strict;
+EVAL q:to/EOF/, :lang<perl5>;
 
 BEGIN {
+    plan tests => 6;
     $|  = 1;
     $^W = 1;
 }
-use Test::More tests => 6;
 use Dancer2::Template::Implementation::ForkedTiny ();
 
 sub preprocess {

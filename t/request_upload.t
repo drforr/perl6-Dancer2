@@ -1,18 +1,17 @@
 use v6;
 use Inline::Perl5;
 use Test::More:from<Perl5>;
+use Test::Fatal:from<Perl5>;
+use Carp:from<Perl5>;
+use File::Spec:from<Perl5>;
 
 EVAL q:to/EOF/, :lang<perl5>;
-use strict;
 use warnings FATAL => 'all';
-use Test::Fatal;
 
 use Dancer2::Core::Request;
 
-use Carp;
 use File::Temp 0.22;
 use File::Basename qw/dirname basename/;
-use File::Spec;
 use Encode qw(encode_utf8);
 
 diag "If you want extra speed, install URL::Encode::XS"

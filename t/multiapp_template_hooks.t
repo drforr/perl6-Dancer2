@@ -1,18 +1,14 @@
 use v6;
 use Inline::Perl5;
 use Test::More:from<Perl5>;
+use Plack::Test:from<Perl5>;
+use HTTP::Request::Common:from<Perl5>;
+use File::Spec:from<Perl5>;
 
 EVAL q:to/EOF/, :lang<perl5>;
 plan tests => 32;
-#!perl
 
-use strict;
-use warnings;
-
-use File::Spec;
 use File::Basename 'dirname';
-use Plack::Test;
-use HTTP::Request::Common;
 
 # XXX JMG Added t/ here
 my $views = File::Spec->rel2abs(

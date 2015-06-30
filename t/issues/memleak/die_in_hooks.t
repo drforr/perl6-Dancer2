@@ -1,15 +1,14 @@
 use v6;
 use Inline::Perl5;
 use Test::More:from<Perl5>;
+use Plack::Test:from<Perl5>;
+use HTTP::Request::Common:from<Perl5>;
 
 EVAL q:to/EOF/, :lang<perl5>;
 plan tests => 6;
 # reported memory leak without GH issue or RT ticket
-use strict;
-use warnings;
-use Plack::Test;
+
 use Capture::Tiny 'capture_stderr';
-use HTTP::Request::Common;
 
 my $called;
 { package Foo::Destroy; sub DESTROY { $called++ } } ## no critic

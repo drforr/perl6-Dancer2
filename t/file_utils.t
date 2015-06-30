@@ -1,15 +1,13 @@
 use v6;
 use Inline::Perl5;
 use Test::More:from<Perl5>;
+use Test::Fatal:from<Perl5>;
+use File::Spec:from<Perl5>;
 
 EVAL q:to/EOF/, :lang<perl5>;
 plan tests => 20;
-use strict;
-use warnings;
 use utf8;
 
-use Test::Fatal;
-use File::Spec;
 BEGIN { @File::Spec::ISA = ("File::Spec::Unix") }
 use File::Temp 0.22;
 

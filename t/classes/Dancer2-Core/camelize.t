@@ -4,8 +4,7 @@ use Test::More:from<Perl5>;
 
 EVAL q:to/EOF/, :lang<perl5>;
 plan tests => 4;
-use strict;
-use warnings;
+
 use Dancer2::Core;
 
 my %tests = (

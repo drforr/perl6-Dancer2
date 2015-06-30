@@ -5,8 +5,6 @@ use Test::More:from<Perl5>;
 EVAL q:to/EOF/, :lang<perl5>;
 plan tests => 9;
 
-use strict;
-use warnings;
 use Dancer2::FileUtils 'path';
 
 use Dancer2::Template::Simple;

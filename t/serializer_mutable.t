@@ -1,18 +1,16 @@
 use v6;
 use Inline::Perl5;
 use Test::More:from<Perl5>;
+use Plack::Test:from<Perl5>;
+use HTTP::Request::Common:from<Perl5>;
+use Encode:from<Perl5>;
+use JSON:from<Perl5>;
+use YAML:from<Perl5>;
 
 EVAL q:to/EOF/, :lang<perl5>;
 plan tests => 41;
-use strict;
-use warnings;
 
 use Dancer2::Serializer::Mutable;
-use Plack::Test;
-use HTTP::Request::Common;
-use Encode;
-use JSON;
-use YAML;
 
 {
     package MyApp;

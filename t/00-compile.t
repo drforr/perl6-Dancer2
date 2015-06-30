@@ -7,10 +7,6 @@ plan tests => 1;
 SKIP: {
     skip "### XXX ### Fix this later", 1 if $] < 6;
 }
-###use 5.006;
-###use strict;
-###use warnings;
-###
 #### this test was generated with Dist::Zilla::Plugin::Test::Compile 2.051
 ###
 ###use Test::More;

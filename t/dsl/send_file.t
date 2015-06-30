@@ -1,17 +1,16 @@
 use v6;
 use Inline::Perl5;
 use Test::More:from<Perl5>;
+use Plack::Test:from<Perl5>;
+use HTTP::Request::Common:from<Perl5>;
+use File::Temp:from<Perl5>;
+use File::Spec:from<Perl5>;
 
 EVAL q:to/EOF/, :lang<perl5>;
-use strict;
-use warnings;
+
 use utf8;
 
 use Encode 'encode_utf8';
-use Plack::Test;
-use HTTP::Request::Common;
-use File::Temp;
-use File::Spec;
 
 {
     package StaticContent;

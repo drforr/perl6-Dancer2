@@ -3,8 +3,6 @@ use Inline::Perl5;
 use Test::More:from<Perl5>;
 
 EVAL q:to/EOF/, :lang<perl5>;
-use strict;
-use warnings;
 
 use Capture::Tiny 0.12 'capture_stderr';
 use Dancer2::Logger::Console;

@@ -4,8 +4,6 @@ use Test::More:from<Perl5>;
 
 EVAL q:to/EOF/, :lang<perl5>;
 plan tests => 3;
-use strict;
-use warnings;
 
 {
     package Handler;

@@ -9,8 +9,6 @@ SKIP: {
 }
 #### who test the tester? We do!
 ###
-###use strict;
-###use warnings;
 ###use File::Spec;
 ###use File::Basename qw/dirname/;
 ###

@@ -1,10 +1,11 @@
 use v6;
 use Inline::Perl5;
+use Test::More:from<Perl5>;
+use Plack::Response:from<Perl5>;
+
 EVAL q:to/EOF/, :lang<perl5>;
-use strict;
-use warnings;
-use Test::More tests => 3;
-use Plack::Response;
+plan tests => 3;
+
 use Dancer2::Core::Response;
 
 sub normalize_headers {

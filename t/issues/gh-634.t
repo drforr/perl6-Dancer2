@@ -1,13 +1,11 @@
 use v6;
 use Inline::Perl5;
 use Test::More:from<Perl5>;
+use File::Spec:from<Perl5>;
 
 EVAL q:to/EOF/, :lang<perl5>;
 plan tests => 3;
-use strict;
-use warnings;
 use File::Temp qw/tempdir/;
-use File::Spec;
 
 my $log_dir = tempdir( CLEANUP => 1 );
 

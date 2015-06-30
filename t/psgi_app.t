@@ -1,15 +1,11 @@
 use v6;
 use Inline::Perl5;
 use Test::More:from<Perl5>;
+use Plack::Test:from<Perl5>;
+use HTTP::Request::Common:from<Perl5>;
 
 EVAL q:to/EOF/, :lang<perl5>;
 plan tests => 25;
-
-use strict;
-use warnings;
-
-use Plack::Test;
-use HTTP::Request::Common;
 
 { package App1; use Dancer2; get '/1' => sub {1}; }
 { package App2; use Dancer2; get '/2' => sub {2}; }
