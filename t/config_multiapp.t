@@ -1,10 +1,11 @@
 use v6;
 use Inline::Perl5;
+use Test::More:from<Perl5>;
+
 EVAL q:to/EOF/, :lang<perl5>;
 use strict;
 use warnings;
 
-use Test::More;
 use File::Spec;
 
 use t::app::t1::lib::App1;

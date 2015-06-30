@@ -1,6 +1,9 @@
 use v6;
 use Inline::Perl5;
+use Test::More:from<Perl5>;
+
 EVAL q:to/EOF/, :lang<perl5>;
+plan tests => 32;
 #!perl
 
 use strict;
@@ -8,7 +11,6 @@ use warnings;
 
 use File::Spec;
 use File::Basename 'dirname';
-use Test::More tests => 32;
 use Plack::Test;
 use HTTP::Request::Common;
 

@@ -1,10 +1,11 @@
 use v6;
 use Inline::Perl5;
+use Test::More:from<Perl5>;
+
 EVAL q:to/EOF/, :lang<perl5>;
 use strict;
 use warnings;
 
-use Test::More import => ['!pass'];
 use Test::Fatal;
 
 subtest 'reserved keywords' => sub {

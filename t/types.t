@@ -1,9 +1,11 @@
 use v6;
 use Inline::Perl5;
+use Test::More:from<Perl5>;
+
 EVAL q:to/EOF/, :lang<perl5>;
+plan tests => 46;
 use strict;
 use warnings;
-use Test::More tests => 46;
 use Test::Fatal;
 use Dancer2::Core::Types;
 

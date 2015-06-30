@@ -1,10 +1,12 @@
 use v6;
 use Inline::Perl5;
+use Test::More:from<Perl5>;
+
 EVAL q:to/EOF/, :lang<perl5>;
+plan tests => 41;
 use strict;
 use warnings;
 
-use Test::More tests => 41;
 use Dancer2::Serializer::Mutable;
 use Plack::Test;
 use HTTP::Request::Common;

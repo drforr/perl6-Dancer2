@@ -1,9 +1,12 @@
 use v6;
 use Inline::Perl5;
+use Test::More:from<Perl5>;
+
 EVAL q:to/EOF/, :lang<perl5>;
+plan tests => 16;
 use strict;
 use warnings;
-use Test::More import => ['!pass'];
+#use Test::More import => ['!pass'];
 use Carp 'croak';
 
 use Dancer2;
@@ -168,8 +171,6 @@ $app->add_route(
     code   => sub {"should not get there"},
 );
 $app->compile_hooks;
-
-plan tests => 16;
 
 my $dispatcher = Dancer2::Core::Dispatcher->new( apps => [$app] );
 my $counter = 0;

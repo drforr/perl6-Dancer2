@@ -1,11 +1,12 @@
 use v6;
 use Inline::Perl5;
+use Test::More:from<Perl5>;
+
 EVAL q:to/EOF/, :lang<perl5>;
-#!perl
+plan tests => 6;
 
 use strict;
 use warnings;
-use Test::More tests => 6;
 use Capture::Tiny 0.12 'capture_stderr';
 use Plack::Test;
 use HTTP::Request::Common;

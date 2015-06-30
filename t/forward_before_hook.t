@@ -1,9 +1,11 @@
 use v6;
 use Inline::Perl5;
+use Test::More:from<Perl5>;
+
 EVAL q:to/EOF/, :lang<perl5>;
+plan tests => 4;
 use strict;
 use warnings;
-use Test::More import => ['!pass'], tests => 4;
 use Dancer2;
 use Plack::Test;
 use HTTP::Request::Common;

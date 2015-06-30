@@ -1,11 +1,10 @@
 use v6;
 use Inline::Perl5;
-EVAL q:to/EOF/, :lang<perl5>;
-# time.t
+use Test::More:from<Perl5>;
 
+EVAL q:to/EOF/, :lang<perl5>;
 use strict;
 use warnings;
-use Test::More;
 use Class::Load 'try_load_class';
 
 my $mocked_epoch = 1355676244;    # "Sun, 16-Dec-2012 16:44:04 GMT"

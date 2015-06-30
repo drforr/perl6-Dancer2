@@ -1,5 +1,7 @@
 use v6;
 use Inline::Perl5;
+
+# XXX Uses Test::More dynamically here
 EVAL q:to/EOF/, :lang<perl5>;
 #!perl
 

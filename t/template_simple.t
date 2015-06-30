@@ -1,7 +1,9 @@
 use v6;
 use Inline::Perl5;
+use Test::More:from<Perl5>;
+
 EVAL q:to/EOF/, :lang<perl5>;
-use Test::More tests => 9;
+plan tests => 9;
 
 use strict;
 use warnings;
