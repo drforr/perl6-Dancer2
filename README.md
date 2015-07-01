@@ -1,25 +1,15 @@
-Readline
+perl6-Dancer2
 =======
 
-Readline provides a Perl 6 interface to libreadline.
-
-XXX This will probably be a frontend to Readline::Gnu when that's factored out.
-XXX For the moment keep all the code here in the Readline module.
+Dancer2 provides an alternative to Bailador, in that I'm going to try to keep this as close to perl5 as reasonable, to make migration simpler.
 
 Installation
 ============
 
-* Since Readline uses libreadline, libreadline.so.5 must be found in /usr/lib.
-To install libreadline5 on Debian for example, please use the following command:
-
-```
-	sudo apt-get install libreadline5
-```
-
 * Using panda (a module management tool bundled with Rakudo Star):
 
 ```
-    panda update && panda install Readline
+    panda update && panda install Dancer2
 ```
 
 * Using ufo (a project Makefile creation script bundled with Rakudo Star) and make:
@@ -41,7 +31,7 @@ To run tests:
 
 ## Author
 
-Jeffrey Goff, DrFOrr on #perl6, https://github.com/drforr/
+Jeffrey Goff, DrForr on #perl6, https://github.com/drforr/
 
 ## License
 
