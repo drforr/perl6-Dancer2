@@ -1,6 +1,8 @@
 use v6;
 use Inline::Perl5;
 use Test::More:from<Perl5>;
+use Plack::Test:from<Perl5>;
+use HTTP::Request::Common:from<Perl5>;
 
 EVAL q:to/EOF/, :lang<perl5>;
 plan tests => 1;
@@ -8,10 +10,6 @@ SKIP: {
     skip "### XXX ### Fix this later", 1 if $] < 6;
 
 }
-###use Test::More;
-###use Plack::Test;
-###use HTTP::Request::Common;
-###
 ###{
 ###    package AutoPageTest;
 ###    use Dancer2;

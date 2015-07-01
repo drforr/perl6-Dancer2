@@ -8,8 +8,10 @@ EVAL q:to/EOF/, :lang<perl5>;
 plan tests => 20;
 use utf8;
 
-BEGIN { @File::Spec::ISA = ("File::Spec::Unix") }
-use File::Temp 0.22;
+BEGIN {
+    use File::Temp;
+    @File::Spec::ISA = ("File::Spec::Unix")
+}
 
 use Dancer2::FileUtils qw/read_file_content path_or_empty path/;
 

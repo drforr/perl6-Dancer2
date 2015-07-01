@@ -1,6 +1,9 @@
 use v6;
 use Inline::Perl5;
 use Test::More:from<Perl5>;
+use File::Spec:from<Perl5>;
+use IPC::Open3:from<Perl5>;
+use IO::Handle:from<Perl5>;
 
 EVAL q:to/EOF/, :lang<perl5>;
 plan tests => 1;
@@ -8,8 +11,6 @@ SKIP: {
     skip "### XXX ### Fix this later", 1 if $] < 6;
 }
 #### this test was generated with Dist::Zilla::Plugin::Test::Compile 2.051
-###
-###use Test::More;
 ###
 ###plan tests => 60 + ($ENV{AUTHOR_TESTING} ? 1 : 0);
 ###
@@ -82,10 +83,6 @@ SKIP: {
 #### no fake home requested
 ###
 ###my $inc_switch = -d 'blib' ? '-Mblib' : '-Ilib';
-###
-###use File::Spec;
-###use IPC::Open3;
-###use IO::Handle;
 ###
 ###open my $stdin, '<', File::Spec->devnull or die "can't open devnull: $!";
 ###

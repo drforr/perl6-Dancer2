@@ -4,13 +4,13 @@ use Test::More:from<Perl5>;
 use Test::Fatal:from<Perl5>;
 use Carp:from<Perl5>;
 use File::Spec:from<Perl5>;
+use File::Temp:from<Perl5>:ver<0.22>;
 
 EVAL q:to/EOF/, :lang<perl5>;
 use warnings FATAL => 'all';
 
 use Dancer2::Core::Request;
 
-use File::Temp 0.22;
 use File::Basename qw/dirname basename/;
 use Encode qw(encode_utf8);
 

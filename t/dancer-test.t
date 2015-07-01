@@ -1,6 +1,10 @@
 use v6;
 use Inline::Perl5;
 use Test::More:from<Perl5>;
+use File::Spec:from<Perl5>;
+use File::Temp:from<Perl5>;
+use Encode:from<Perl5>;
+use URI::Escape:from<Perl5>;
 
 EVAL q:to/EOF/, :lang<perl5>;
 plan tests => 1;
@@ -9,7 +13,6 @@ SKIP: {
 }
 #### who test the tester? We do!
 ###
-###use File::Spec;
 ###use File::Basename qw/dirname/;
 ###
 ###BEGIN {
@@ -23,9 +26,6 @@ SKIP: {
 ###use Dancer2;
 ###use Dancer2::Test;
 ###use Dancer2::Core::Request;
-###use File::Temp;
-###use Encode;
-###use URI::Escape;
 ###
 ###$Dancer2::Test::NO_WARN = 1;
 ###
