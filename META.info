@@ -1,7 +1,8 @@
 {
-	"name"        : "Dancer2",
-	"version"     : "*",
-	"description" : "Straight port of Dancer2",
+	"name"		: "Dancer2",
+	"version"	: "*",
+	"description"	: "Straight port of Dancer2",
+	"depends"	: [ 'Inline::Perl5' ],
 	"test-depends": [ 'Plack::Test',
                           'Test::Whitespaces' ], # XXX perl5 dependencies of course
 	"provides"    : {

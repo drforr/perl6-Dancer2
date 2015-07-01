@@ -3,10 +3,9 @@ use Inline::Perl5;
 use Test::More:from<Perl5>;
 use Test::Fatal:from<Perl5>;
 use File::Spec:from<Perl5>;
-use Dancer2:from<Perl5>;
 
 EVAL q:to/EOF/, :lang<perl5>;
-#use Dancer2;
+use Dancer2;
 use Dancer2::Core::App;
 use Dancer2::Core::Dispatcher;
 use Dancer2::Core::Hook;
